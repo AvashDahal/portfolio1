@@ -82,8 +82,8 @@ nav
     font-size: 80%;
     padding: 1rem;
 }
-nav h1 a{
-    font-family: var(--sans);
+nav h1 a {
+  font-family: var(--sans);
 
 }
 nav ul
@@ -116,7 +116,6 @@ nav a:hover
   margin: auto;
   overflow: hidden;
 } */
-
 
 /* .footer__heading {
   display: flex;
