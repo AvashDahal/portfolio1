@@ -1,0 +1,170 @@
+:root {
+  --sage: #d6d46d;
+  --yellow: #ffff00;
+  --beige: #f4dfb6;
+  --sky: rgb(84, 204, 248);
+  --red: red;
+  --aqua: aqua;
+  --orange: #de8f5f;
+  --teal: teal;
+  --maroon: #9a4444;
+  --black: #171321;
+  --white: #f7f8fa;
+  --greenish: #99ffcd;
+  --font-size: 1.3rem;
+  --mono: "Karla", sans-serif;
+  --sans: "Tilt Neon", sans-serif;
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--sans);
+  background-color: var(--teal);
+  color: var(--white);
+  font-size: var(--font-size);
+}
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+a {
+  color: var(--maroon);
+}
+a:hover {
+  color: var(--red);
+  text-decoration: none;
+}
+#intro {
+  padding-bottom: 10rem;
+}
+#intro p {
+  font-size: 1 rem;
+  line-height: 1.5;
+}
+#intro .name {
+  font-family: var(--mono);
+}
+.name span {
+  font-family: var(--sans);
+  font-size: 4rem;
+  color: var(--yellow);
+  display: block;
+}
+#intro h2 {
+  font-size: 4rem;
+  font-weight: normal;
+}
+main {
+  flex-grow: 1;
+}
+.footer {
+  background-color: var(--greenish);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  flex-direction: column;
+  height: 20vh;
+  margin-top: 45%;
+}
+nav
+{
+    font-family: var(--mono);
+    font-size: 80%;
+    padding: 1rem;
+}
+nav h1 a{
+    font-family: var(--sans);
+
+}
+nav ul
+{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+nav a
+{
+    color: var(--white);
+    text-decoration: none;
+    display: block;
+}
+nav a:hover
+{
+    color: var(--red);
+}
+
+/* header {
+  display: grid;
+  grid-template-columns: repeat(2, 6fr);
+  grid-template-rows: repeat(2, 1fr);
+  width: 1100px;
+  margin: auto;
+  overflow: hidden;
+} */
+
+
+/* .footer__heading {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+} */
+.footer__content {
+  text-align: center;
+}
+.footer__paragraph {
+  text-align: center;
+  max-width: 400px;
+  margin: 10px auto;
+}
+
+.phoneicon {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  display: inline-block;
+  align-self: center;
+}
+
+.phoneicon img {
+  width: 100%;
+  height: 100%;
+}
+
+.phoneicon a {
+  display: block;
+  padding: 10px;
+
+  @media screen and (max-width: 480px) {
+    .lgscreenphone {
+      display: none;
+    }
+    .mbscreenphone {
+      display: block;
+    }
+  }
+
+  @media screen and (min-width: 481px) {
+    .mbscreenphone {
+      display: none;
+    }
+    .lgscreenphone {
+      display: block;
+    }
+  }
+}
