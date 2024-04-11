@@ -11,6 +11,9 @@
   --black: #171321;
   --white: #f7f8fa;
   --greenish: #99ffcd;
+  --brown: #5d2f27;
+  --lightb: #a7754d;
+  --darkgreen: #17301c;
   --font-size: 1.3rem;
   --mono: "Karla", sans-serif;
   --sans: "Tilt Neon", sans-serif;
@@ -44,7 +47,9 @@ a:hover {
   text-decoration: none;
 }
 #intro {
-  padding-bottom: 10rem;
+  padding: 4rem 1rem 10rem 1rem; /*T R B L*/
+  max-width: 1200px;
+  margin: 0 auto;
 }
 #intro p {
   font-size: 1 rem;
@@ -66,48 +71,65 @@ a:hover {
 main {
   flex-grow: 1;
 }
-.footer {
-  background-color: var(--greenish);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  flex-direction: column;
-  height: 20vh;
-  margin-top: 45%;
-}
-nav
-{
-    font-family: var(--mono);
-    font-size: 80%;
-    padding: 1rem;
+
+nav {
+  font-family: var(--mono);
+  font-size: 80%;
+  padding: 1rem;
 }
 nav h1 a {
   font-family: var(--sans);
-
 }
-nav ul
-{
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: row wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
 }
-nav a
-{
-    color: var(--white);
-    text-decoration: none;
-    display: block;
-}
-nav a:hover
-{
-    color: var(--red);
+nav li:first-child {
+  flex-basis: 100%;
+  text-align: center;
 }
 
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  display: block;
+}
+
+nav [class*="fa-"] {
+  font-size: 150%;
+  color: var(--sage);
+}
+nav a :hover,
+nav [class*="fa-"] :hover {
+  color: var(--red);
+}
+
+.resume {
+  background-color: var(--maroon);
+  border-radius: 5px;
+  padding: 0.2rem;
+  outline: 4px solid var(--maroon);
+}
+.section__pro {
+  background-color: var(--lightb);
+}
+@media (min-width: 850px) {
+  nav {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  nav li:first-child {
+    flex-basis: auto;
+    text-align: left;
+    margin-right: auto;
+  }
+}
 /* header {
   display: grid;
   grid-template-columns: repeat(2, 6fr);
@@ -123,10 +145,34 @@ nav a:hover
   padding-top: 1rem;
   padding-bottom: 1rem;
 } */
-.footer__content {
+.div__contact {
+  background-color: var(--maroon);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 3rem 0;
+  flex-direction: column;
+  /* height: 20vh; */
+  /* margin-top: 45%; */
+}
+.gradient {
+  background: linear-gradient(
+    125deg,
+    rgba(41, 202, 204, 1) 0%,
+    rgba(74, 200, 179, 1) 15%,
+    rgba(92, 199, 166, 1) 23%,
+    rgba(228, 189, 63, 1) 84%,
+    rgba(235, 188, 58, 1) 87%,
+    rgba(242, 188, 53, 1) 90%,
+    rgba(253, 187, 45, 1) 95%
+  );
+  height: 3px;
+}
+.contact__content {
   text-align: center;
 }
-.footer__paragraph {
+.contact__paragraph {
   text-align: center;
   max-width: 400px;
   margin: 10px auto;
@@ -166,4 +212,64 @@ nav a:hover
       display: block;
     }
   }
+}
+
+/* Project Sectio */
+#projects {
+  padding: 4rem 1rem;
+}
+#projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: calc(2.5rem * 1.5);
+}
+#projects h3 {
+  color: var(--yellow);
+}
+#projects h4 {
+  font-size: 1rem;
+  font-family: var(--sans);
+  margin: 0;
+}
+.blackbox {
+  background-color: var(--darkgreen);
+  padding: 1rem;
+  border-radius: 15px;
+  color: var(--white);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+#projects ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  gap: 1rem;
+  font-size: 1rem;
+}
+.img__pro1 {
+  height: 386px;
+  width: 466px;
+  margin: 2rem 0 4rem 0;
+  border-left: 1px solid var(--maroon);
+  border-top: 1px solid var(--maroon);
+  border-radius: 25px;
+  padding: 1rem;
+}
+footer {
+  text-align: center;
+}
+footer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 2rem 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 3rem;
+  font-size: 3rem;
+}
+footer > h2 {
+  color: var(--yellow);
 }
