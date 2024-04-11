@@ -124,6 +124,9 @@ button :hover
 color: var(--glossymaroon);
 }
 .section__pro {
+  /* display: flex;
+  flex-wrap: row wrap;
+  padding-left: 3rem ; */
   background-color: var(--lightb);
   /* font-family: var(--mono); */
 }
@@ -290,6 +293,11 @@ footer > h2 {
     display :grid;
     grid-template-columns: repeat(10,1fr);
     gap: 1rem;
+  }
+  #projects
+  {
+    max-width: 1200px;
+    margin: 0 auto;
   }
   .img__pro1
   {
