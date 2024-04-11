@@ -14,6 +14,7 @@
   --brown: #5d2f27;
   --lightb: #a7754d;
   --darkgreen: #17301c;
+  --glossymaroon:#8F011B;
   --font-size: 1.3rem;
   --mono: "Karla", sans-serif;
   --sans: "Tilt Neon", sans-serif;
@@ -110,14 +111,21 @@ nav [class*="fa-"] :hover {
   color: var(--red);
 }
 
-.resume {
+button
+{
   background-color: var(--maroon);
+  border:4px solid var(--maroon);
   border-radius: 5px;
   padding: 0.2rem;
-  outline: 4px solid var(--maroon);
+  color: var(--white);
+}
+button :hover
+{
+color: var(--glossymaroon);
 }
 .section__pro {
   background-color: var(--lightb);
+  /* font-family: var(--mono); */
 }
 @media (min-width: 850px) {
   nav {
@@ -221,6 +229,9 @@ nav [class*="fa-"] :hover {
 #projects h2 {
   font-size: 2.5rem;
   margin-bottom: calc(2.5rem * 1.5);
+  font-weight: bold;
+  
+  
 }
 #projects h3 {
   color: var(--yellow);
@@ -250,7 +261,7 @@ nav [class*="fa-"] :hover {
 }
 .img__pro1 {
   height: 386px;
-  width: 466px;
+  width: 100%;
   margin: 2rem 0 4rem 0;
   border-left: 1px solid var(--maroon);
   border-top: 1px solid var(--maroon);
@@ -272,4 +283,28 @@ footer ul {
 }
 footer > h2 {
   color: var(--yellow);
+}
+@media (min-width: 550px)
+{
+  article {
+    display :grid;
+    grid-template-columns: repeat(10,1fr);
+    gap: 1rem;
+  }
+  .img__pro1
+  {
+    grid-column: 1/6;
+    grid-row: 1/2;
+  }
+  .text
+  {
+    grid-column: 5/11;
+    grid-row: 1/2;
+    order:2;
+    text-align: right;
+  }
+  #projects ul
+  {
+    justify-content: flex-end;
+  }
 }
